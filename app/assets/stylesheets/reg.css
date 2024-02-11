@@ -182,7 +182,7 @@ details[open] summary:after {
 	transform: rotate(135deg) translate(80%, 0%);
 }
 
-ul {
+.list {
 	width: 100%;
 	background: rgba(0, 0, 0, 0.3);
 	position: absolute;
@@ -200,7 +200,7 @@ ul::-webkit-scrollbar {
     display: none;
 }
 
-li {
+.list li {
 	margin: 0;
 	padding: 1rem 0;
 	border-bottom: 1px solid #ccc;
@@ -209,11 +209,11 @@ li {
     font-weight: 300;
 }
 
-li:first-child {
+.list li:first-child {
 	padding-top: 0;
 }
 
-li:last-child {
+.list li:last-child {
 	padding-bottom: 0;
 	border-bottom: none;
 }
@@ -287,4 +287,21 @@ label span {
 .flexbreak2 {
     flex-basis: 40%;
     height: 0;
+}
+
+.title h1 span {
+    font-size: 15px;
+    color: #FF4242;
+    font-weight: 300;
+}
+
+.title div h2 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.title div li {
+    font-weight: 200;
+    font-size: 10px;
+    list-style: none;
 }
