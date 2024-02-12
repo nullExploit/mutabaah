@@ -76,7 +76,7 @@ input[type='email']:focus, input[type='password']:focus, input[type='email']:hov
     top: 3rem;
 }
 
-.btn button {
+.btn button, .btn input {
     width: 25rem;
     height: 3rem;
     border-radius: 50px;
@@ -88,7 +88,7 @@ input[type='email']:focus, input[type='password']:focus, input[type='email']:hov
     transition: .5s;
 }
 
-.btn button:hover {
+.btn button:hover, .btn input:hover {
     border: 1px solid rgba(255, 255, 255, 0.5);
     background-color: transparent;
 }
