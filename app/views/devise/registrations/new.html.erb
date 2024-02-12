@@ -99,5 +99,28 @@
             }
         });
 
+        const details = document.querySelectorAll('.custom-select'),
+        radios = document.querySelectorAll('.radios'),
+        radios1 = document.getElementsByName('item'),
+        radios2 = document.getElementsByName('job'),
+        itemRadioName = ['SD', 'SMP', 'SMA', 'S1', 'Lain-lain'],
+        jobRadioName = ['Pelajar', 'Pegawai', 'Wiraswasta', 'Lain-lain'];
+
+        radios[0].addEventListener('change', () => {
+            for (let radio of radios1) {
+                if (itemRadioName.includes(radio.title)) {
+                    details[0].removeAttribute('open')
+                }
+            }
+        });
+
+        radios[1].addEventListener('change', () => {
+            for (let radio of radios2) {
+                if (jobRadioName.includes(radio.title)) {
+                    details[1].removeAttribute('open')
+                }
+            }
+        });
+
     </script>
 <% end %>
