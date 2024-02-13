@@ -1,87 +1,87 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= stylesheet_link_tag "reg", "data-turbo-track": "reload" %>
       <section class="sect">
         <div class="box">
-            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                <div class="title">
-                    <h1>Sign Up Page <br><br><%= render "devise/shared/error_messages", resource: resource %><br></h1>
+            <div class="title">
+                <h1>Sign Up Page <br><br><%= render "devise/shared/error_messages", resource: resource %><br></h1>
+            </div>
+            <div class="flexbreak"></div>
+            <div class="inputs">
+                <div class="email mtop mright">
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
                 </div>
-                <div class="flexbreak"></div>
-                <div class="inputs">
-                    <div class="email mtop mright">
-                    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
-                    </div>
-                    <div class="pass mtop mright">
-                    <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password' %>
-                    </div>
-                    <div class="conf mtop mright">
-                    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation' %>
-                    </div>
-                    <div class="name mtop mright">
-                    <%= f.text_field :name, placeholder: 'Full Name', onkeypress: 'return /[a-z]/i.test(event.key)' %>
-                    </div>
-                    <div class="age mtop mright">
-                    <%= f.text_field :age, placeholder: 'Age', maxlength: '2' %>
-                    </div>
-                    <details class="custom-select mtop mright">
-                        <summary class="radios">
-                            <%= f.radio_button :education, 'Education', title: 'Education', checked: true %>
-                            <%= f.radio_button :education, 'SD', title: 'SD' %>
-                            <%= f.radio_button :education, 'SMP', title: 'SMP' %>
-                            <%= f.radio_button :education, 'SMA', title: 'SMA' %>
-                            <%= f.radio_button :education, 'S1', title: 'S1' %>
-                            <%= f.radio_button :education, 'Lain-lain', title: 'Lain-lain' %>
-                        </summary>
-                        <ul class="list">
-                            <li>
-                                <label for="user_education_sd">
-                                    SD
-                                    <span></span>
-                                </label>
-                            </li>
-                            <li>
-                                <label for="user_education_smp">SMP</label>
-                            </li>
-                            <li>
-                                <label for="user_education_sma">SMA</label>
-                            </li>
-                            <li>
-                                <label for="user_education_s1">S1</label>
-                            </li>
-                            <li>
-                                <label for="user_education_lain-lain">Lain-lain</label>
-                            </li>
-                        </ul>
-                    </details>
-                    <details class="custom-select mtop mright">
-                        <summary class="radios">
-                            <%= f.radio_button :job, 'Job', title: 'Job', checked: true %>
-                            <%= f.radio_button :job, 'Pelajar', title: 'Pelajar' %>
-                            <%= f.radio_button :job, 'Pegawai', title: 'Pegawai' %>
-                            <%= f.radio_button :job, 'Wiraswasta', title: 'Wiraswasta' %>
-                            <%= f.radio_button :job, 'Lain-lain', title: 'Lain-lain' %>
-                        </summary>
-                        <ul class="list">
-                            <li>
-                                <label for="user_job_pelajar">
-                                    Pelajar
-                                    <span></span>
-                                </label>
-                            </li>
-                            <li>
-                                <label for="user_job_pegawai">Pegawai</label>
-                            </li>
-                            <li>
-                                <label for="user_job_wiraswasta">Wiraswasta</label>
-                            </li>
-                            <li>
-                                <label for="user_job_lain-lain">Lain-lain</label>
-                            </li>
-                        </ul>
-                    </details>
-                    <div class="btn mtop mright">
-                        <%= f.submit "Sign Up"%>
-                    </div>
-                <% end %>
+                <div class="pass mtop mright">
+                  <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password' %>
+                </div>
+                <div class="conf mtop mright">
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation' %>
+                </div>
+                <div class="name mtop mright">
+                  <%= f.text_field :name, placeholder: 'Full Name', onkeypress: 'return /[a-z]/i.test(event.key)' %>
+                </div>
+                <div class="age mtop mright">
+                  <%= f.text_field :age, placeholder: 'Age', maxlength: '2' %>
+                </div>
+                <details class="custom-select mtop mright">
+                    <summary class="radios">
+                        <%= f.radio_button :education, 'Education', title: 'Education', checked: true %>
+                        <%= f.radio_button :education, 'SD', title: 'SD' %>
+                        <%= f.radio_button :education, 'SMP', title: 'SMP' %>
+                        <%= f.radio_button :education, 'SMA', title: 'SMA' %>
+                        <%= f.radio_button :education, 'S1', title: 'S1' %>
+                        <%= f.radio_button :education, 'Lain-lain', title: 'Lain-lain' %>
+                    </summary>
+                    <ul class="list">
+                        <li>
+                            <label for="user_education_sd">
+                                SD
+                                <span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="user_education_smp">SMP</label>
+                        </li>
+                        <li>
+                            <label for="user_education_sma">SMA</label>
+                        </li>
+                        <li>
+                            <label for="user_education_s1">S1</label>
+                        </li>
+                        <li>
+                            <label for="user_education_lain-lain">Lain-lain</label>
+                        </li>
+                    </ul>
+                </details>
+                <details class="custom-select mtop mright">
+                    <summary class="radios">
+                        <%= f.radio_button :job, 'Job', title: 'Job', checked: true %>
+                        <%= f.radio_button :job, 'Pelajar', title: 'Pelajar' %>
+                        <%= f.radio_button :job, 'Pegawai', title: 'Pegawai' %>
+                        <%= f.radio_button :job, 'Wiraswasta', title: 'Wiraswasta' %>
+                        <%= f.radio_button :job, 'Lain-lain', title: 'Lain-lain' %>
+                    </summary>
+                    <ul class="list">
+                        <li>
+                            <label for="user_job_pelajar">
+                                Pelajar
+                                <span></span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="user_job_pegawai">Pegawai</label>
+                        </li>
+                        <li>
+                            <label for="user_job_wiraswasta">Wiraswasta</label>
+                        </li>
+                        <li>
+                            <label for="user_job_lain-lain">Lain-lain</label>
+                        </li>
+                    </ul>
+                </details>
+                <div class="btn mtop mright">
+                    <%= f.submit "Sign Up"%>
+                </div>
+<% end %>
                 <div class="flexbreak2"></div>
                 <div class="link mtop mright">
                     <p>Already Sign In? <%- if controller_name != 'sessions' %>
