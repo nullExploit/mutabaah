@@ -20,7 +20,7 @@
                   <%= f.text_field :name, placeholder: 'Full Name', onkeypress: 'return /[a-z]/i.test(event.key)' %>
                 </div>
                 <div class="age mtop mright">
-                  <%= f.text_field :age, placeholder: 'Age', onkeypress: 'if (this.value.length > 1) return false' %>
+                  <%= f.text_field :age, placeholder: 'Age', maxlength: '2' %>
                 </div>
                 <details class="custom-select mtop mright">
                     <summary class="radios">
