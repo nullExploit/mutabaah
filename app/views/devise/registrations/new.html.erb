@@ -81,6 +81,7 @@
                 <div class="btn mtop mright">
                     <%= f.submit "Sign Up"%>
                 </div>
+<% end %>
                 <div class="flexbreak2"></div>
                 <div class="link mtop mright">
                     <p>Already Sign In? <%- if controller_name != 'sessions' %>
@@ -90,37 +91,4 @@
             </div>
         </div>
     </section>
-    <script>
-        
-        const age = document.querySelector('.age input');
-        age.addEventListener("keypress", (evt) => {
-            if (evt.which != 8 && evt.which != 0 && evt.which < 48 || evt.which > 57 ) {
-                evt.preventDefault();
-            }
-        });
-
-        const details = document.querySelectorAll('.custom-select'),
-        radios = document.querySelectorAll('.radios'),
-        radios1 = document.getElementsByName('user[education]'),
-        radios2 = document.getElementsByName('user[job]'),
-        itemRadioName = ['SD', 'SMP', 'SMA', 'S1', 'Lain-lain'],
-        jobRadioName = ['Pelajar', 'Pegawai', 'Wiraswasta', 'Lain-lain'];
-
-        radios[0].addEventListener('change', () => {
-            for (let radio of radios1) {
-                if (itemRadioName.includes(radio.title)) {
-                    details[0].removeAttribute('open')
-                }
-            }
-        });
-
-        radios[1].addEventListener('change', () => {
-            for (let radio of radios2) {
-                if (jobRadioName.includes(radio.title)) {
-                    details[1].removeAttribute('open')
-                }
-            }
-        });
-
-    </script>
-<% end %>
+    <%= javascript_include_tag('reg.js')%>
