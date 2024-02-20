@@ -188,13 +188,29 @@ input[type='email']:focus, input[type='password']:focus, input[type='email']:hov
     margin-left: 1rem;
 }
 
-.forgot a {
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.forgot a, .links a {
     color: #fff;
     font-weight: 300;
     transition: .5s;
     text-decoration-color: transparent;
 }
 
-.forgot a:hover {
+.forgot a:hover, .links a:hover {
     text-decoration-color: #fff;
+}
+
+.title div h2 {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.title div li {
+    font-weight: 200;
+    font-size: 10px;
+    list-style: none;
 }

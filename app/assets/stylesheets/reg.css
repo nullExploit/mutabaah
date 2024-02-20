@@ -290,12 +290,6 @@ label span {
     height: 0;
 }
 
-.title h1 span {
-    font-size: 15px;
-    color: #FF4242;
-    font-weight: 300;
-}
-
 .title div h2 {
     font-size: 15px;
     font-weight: 300;
