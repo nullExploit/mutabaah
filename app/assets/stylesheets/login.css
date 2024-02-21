@@ -58,7 +58,6 @@ input[type='email']::placeholder, input[type='password']::placeholder {
 input[type='email']:focus, input[type='password']:focus, input[type='email']:hover, input[type='password']:hover {
     background-color: transparent;
     border: 0.5px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: none;
 }
 
 .inputs {
