@@ -10,8 +10,7 @@
                     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
                 </div>
                 <div class="btn mtop">
-                    <button>Send Me Reset Password Instruction</button>
-                    <% f.submit 'Send Me Reset Password Instructions' %>
+                    <%= f.submit 'Send Me Reset Password Instruction' %>
                 </div>
                 <div class="links mtop">
                   <%- if controller_name != 'sessions' %>
