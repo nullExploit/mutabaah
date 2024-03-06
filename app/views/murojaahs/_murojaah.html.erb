@@ -1,0 +1,112 @@
+<%= stylesheet_link_tag "result", "data-turbo-track": "reload" %>
+<section class="body">
+        <section class="sect">
+            <div class="title mtop">
+                <h1>Result <br><span><%= notice %></span></h1>
+            </div>
+            <div class="flexbreak"></div>
+            <div class="box mtop checks">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Ba'diyah Wudhu</th>
+                        <th>Qiyamul Lail</th>
+                        <th>Witir</th>
+                        <th>Tahiyatul Masjid (Shubuh)</th>
+                        <th>Qabliyah Subuh</th>
+                        <th>Duha</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><%= murojaah.LU %></td>
+                        <td><%= murojaah.LL %></td>
+                        <td><%= murojaah.LW %></td>
+                        <td><%= murojaah.ST %></td>
+                        <td><%= murojaah.SQ %></td>
+                        <td><%= murojaah.SH %></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="box checks">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Tahiyatul Masjid (Zuhur)</th>
+                        <th>Qabliyah Zuhur</th>
+                        <th>Ba'diyah Zuhur</th>
+                        <th>Tahiyatul Masjid (Asar)</th>
+                        <th>Bainal Azan Wal Iqamah (Asar)</th>
+                        <th>Tahiyatul Masjid (Maghrib)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><%= murojaah.ZT %></td>
+                        <td><%= murojaah.ZQ %></td>
+                        <td><%= murojaah.ZB %></td>
+                        <td><%= murojaah.AT %></td>
+                        <td><%= murojaah.AA %></td>
+                        <td><%= murojaah.MT %></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="box checks">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Bainal Azan Wal Iqamah (Maghrib)</th>
+                        <th>Ba'diyah Maghrib</th>
+                        <th>Tahiyatul Masjid (Isya)</th>
+                        <th>Bainal Azan Wal Iqamah (Isya)</th>
+                        <th>Ba'diyah Isya</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><%= murojaah.MA %></td>
+                        <td><%= murojaah.MB %></td>
+                        <td><%= murojaah.IT %></td>
+                        <td><%= murojaah.IA %></td>
+                        <td><%= murojaah.IB %></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="box checks">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Total Rakaat</th>
+                        <th>Total Halaman</th>
+                        <th>QS.</th>
+                        <th>Nilai Hafalan</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><%= murojaah.total_rakaat %></td>
+                        <td><%= murojaah.total_page %></td>
+                        <td><%= murojaah.no_surah %></td>
+                        <td><%= murojaah.grade %></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="flexbreak"></div>
+            
+            <% if current_user.email != @admin %>
+            <div class="links">
+                <%= button_to("Back", murojaahs_path, method: :get) %>
+            </div>
+            <% elsif current_user.email == @admin %>
+            <div class="links">
+                <%= button_to("Edit", edit_murojaah_path(@murojaah), method: :get) %>
+                <%= button_to("Back", murojaahs_path, method: :get) %>
+                <%= button_to("Delete", @murojaah, method: :delete) %>
+            </div>
+            <% end %>
+        </section>
+    </section>

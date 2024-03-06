@@ -1,0 +1,57 @@
+<%= stylesheet_link_tag "result", "data-turbo-track": "reload" %>
+        <section class="body">
+        <section class="sect">
+            <div class="title mtop">
+                <% if current_user.email != @admin %>
+                <%= button_to("Log Out", destroy_user_session_path, method: :delete) %>
+                <h1>Result <br><span><%= notice %></span></h1>
+                  <%= button_to("Murojaah", new_murojaah_path, method: :get) %>
+                <% elsif current_user.email == @admin %>
+                  <h1>Result <br><span><%= notice %></span><br><%= button_to("Log Out", destroy_user_session_path, method: :delete) %></h1>
+                <% end %>
+            </div>
+            <div class="flexbreak"></div>
+            <div class="box mtop">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Date & Time</th>
+                        <th>Name</th>
+                        <th>Checks</th>
+                        <th>Age</th>
+                        <th>Education</th>
+                        <th>Job</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                        
+                      
+  <% @murojaahs.each do |murojaah| %>
+                      <% if current_user == murojaah.user %>
+                      <tr>
+                        <td class="date"><%= murojaah.created_at.strftime('%e %B, %Y') %><br><%= murojaah.created_at.strftime('%H:%M')%></td>
+                        <td><%= murojaah.user.name %></td>
+                        <td><%= link_to "Show Checks", murojaah %></td>
+                        <td><%= murojaah.user.age %></td>
+                        <td><%= murojaah.user.education %></td>
+                        <td><%= murojaah.user.job %></td>
+                      </tr>
+                      <% elsif current_user.email == @admin %>
+                      <tr>
+                        <td class="date"><%= murojaah.created_at.strftime('%e %B, %Y') %><br><%= murojaah.created_at.strftime('%H:%M')%></td>
+                        <td><%= murojaah.user.name %></td>
+                        <td><%= link_to "Show Checks", murojaah %></td>
+                        <td><%= murojaah.user.age %></td>
+                        <td><%= murojaah.user.education %></td>
+                        <td><%= murojaah.user.job %></td>
+                      </tr>
+                      <% end %>
+    <% end %>
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+    </section>
+    <%= javascript_include_tag('result.js')%>
+

@@ -10,7 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_11_101436) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_06_022757) do
+  create_table "murojaahs", force: :cascade do |t|
+    t.string "LU"
+    t.string "LL"
+    t.string "LW"
+    t.string "ST"
+    t.string "SQ"
+    t.string "SH"
+    t.string "ZT"
+    t.string "ZQ"
+    t.string "ZB"
+    t.string "AT"
+    t.string "AA"
+    t.string "MT"
+    t.string "MA"
+    t.string "MB"
+    t.string "IT"
+    t.string "IA"
+    t.string "IB"
+    t.integer "total_rakaat"
+    t.integer "total_page"
+    t.integer "no_surah"
+    t.integer "grade"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_murojaahs_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

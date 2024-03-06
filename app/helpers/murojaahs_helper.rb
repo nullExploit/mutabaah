@@ -1,0 +1,2 @@
+module MurojaahsHelper
+end
