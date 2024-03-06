@@ -300,10 +300,10 @@
                 </div>
               </div>
               <div class="rating mtoplite">
-                <%= form.text_field :total_rakaat, placeholder: 'Total Rakaat', maxlength: '2', required: 'true' %>
-                <%= form.text_field :total_page, placeholder: 'Total Halaman', maxlength: '3', required: 'true' %>
-                <%= form.text_field :no_surah, placeholder: 'QS.', maxlength: '3', required: 'true' %>
-                <%= form.text_field :grade, placeholder: 'Nilai Hafalan', maxlength: '2', required: 'true' %>
+                <%= form.text_field :total_rakaat, autocomplete: 'off', placeholder: 'Total Rakaat', maxlength: '2', required: 'true' %>
+                <%= form.text_field :total_page, autocomplete: 'off', placeholder: 'Total Halaman', maxlength: '3', required: 'true' %>
+                <%= form.text_field :no_surah, autocomplete: 'off', placeholder: 'QS.', maxlength: '3', required: 'true' %>
+                <%= form.text_field :grade, autocomplete: 'off', placeholder: 'Nilai Hafalan', maxlength: '2', required: 'true' %>
               </div>
               <div class="sub mtoplite">
                 <%= form.submit 'Submit' %>

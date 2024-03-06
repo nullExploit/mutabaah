@@ -8,19 +8,19 @@
             <div class="flexbreak"></div>
             <div class="inputs">
                 <div class="email mtop mright">
-                  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email' %>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: 'Email' %>
                 </div>
                 <div class="pass mtop mright">
-                  <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password' %>
+                  <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
                 </div>
                 <div class="conf mtop mright">
-                  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Password Confirmation' %>
+                  <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Password Confirmation' %>
                 </div>
                 <div class="name mtop mright">
-                  <%= f.text_field :name, placeholder: 'Full Name', onkeypress: 'return /[a-z ]/i.test(event.key)' %>
+                  <%= f.text_field :name, autocomplete: 'off', placeholder: 'Full Name', onkeypress: 'return /[a-z ]/i.test(event.key)' %>
                 </div>
                 <div class="age mtop mright">
-                  <%= f.text_field :age, placeholder: 'Age', maxlength: '2' %>
+                  <%= f.text_field :age, autocomplete: 'off', placeholder: 'Age', maxlength: '2' %>
                 </div>
                 <details class="custom-select mtop mright">
                     <summary class="radios">
