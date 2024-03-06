@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "application"%>
+    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" %>
+    <%= javascript_include_tag "layout" %>
   </head>
 
   <body>
+    <div class="loadercontainer">
+      <div class="wrapper">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+          <div class="shadow"></div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
