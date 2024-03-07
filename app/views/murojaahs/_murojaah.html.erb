@@ -97,11 +97,11 @@
             </div>
             <div class="flexbreak"></div>
             
-            <% if current_user.email != @admin %>
+            <% if current_user.role != "ADMIN" %>
             <div class="links">
                 <%= button_to("Back", murojaahs_path, method: :get) %>
             </div>
-            <% elsif current_user.email == @admin %>
+            <% elsif current_user.role == "ADMIN" %>
             <div class="links">
                 <%= button_to("Edit", edit_murojaah_path(@murojaah), method: :get) %>
                 <%= button_to("Back", murojaahs_path, method: :get) %>

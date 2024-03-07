@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application"%>
-    <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <% unless current_page?(root_path) %>
+      <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" %>
+    <% end %>
     <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js" %>
     <%= javascript_include_tag "layout" %>
+    <%= favicon_link_tag asset_path('Mountain_Landscape_Adventure_Logo-removebg-preview.png') %>
   </head>
 
   <body>
