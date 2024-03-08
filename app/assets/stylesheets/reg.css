@@ -201,7 +201,14 @@ details[open] summary:after {
 }
 
 ul::-webkit-scrollbar {
-    display: none;
+    background-color: transparent; 
+    overflow: hidden;
+    height: 1rem;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
 }
 
 .list li {
