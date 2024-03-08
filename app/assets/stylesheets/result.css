@@ -9,7 +9,7 @@
 }
 
 .body {
-    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/5bd17b7d6a493-wallpaper-18865c7acf1c8739cea09962a2a9fbf0.jpg');
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
