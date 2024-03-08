@@ -28,7 +28,7 @@
                         
                       
   <% @murojaahs.each do |murojaah| %>
-                      <% if current_user.role != "ADMIN" %>
+                      <% if current_user == murojaah.user %>
                       <tr>
                         <td class="date"><%= murojaah.created_at.strftime('%e %B, %Y') %><br><%= murojaah.created_at.strftime('%H:%M')%></td>
                         <td><%= murojaah.user.name %></td>
