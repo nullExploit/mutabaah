@@ -5,7 +5,6 @@ class MurojaahsController < ApplicationController
   # GET /murojaahs or /murojaahs.json
   def index
     @murojaahs = Murojaah.all
-    @admin = 'rishadaufaharahap@gmail.com'
   end
 
   # GET /murojaahs/1 or /murojaahs/1.json
@@ -64,7 +63,6 @@ class MurojaahsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_murojaah
       @murojaah = Murojaah.find(params[:id])
-      @admin = 'rishadaufaharahap@gmail.com'
     end
 
     # Only allow a list of trusted parameters through.
