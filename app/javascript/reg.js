@@ -27,3 +27,10 @@ const age = document.querySelector('.age input');
                 }
             }
         });
+
+        const signUp = document.querySelector('input[type=submit]');
+        signUp.addEventListener('click', () => {
+          setTimeout(() => {
+            signUp.disabled = true
+          }, 1);
+        })

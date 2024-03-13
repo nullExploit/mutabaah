@@ -7,3 +7,17 @@ const rating = document.querySelectorAll('.rating input');
                     }
                 });
             })
+
+            const formSub = document.querySelector('input[type=submit]');
+            formSub.addEventListener('click', () => {
+              setTimeout(() => {
+                formSub.disabled = true
+              }, 1);
+            })
+
+            const backForm = document.querySelector('button[type=submit]');
+            backForm.addEventListener('click', () => {
+            setTimeout(() => {
+                backForm.disabled = true
+            }, 1);
+            })

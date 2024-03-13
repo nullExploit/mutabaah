@@ -32,3 +32,10 @@ anime.timeline({loop: false})
 //     easing: "easeOutExpo",
 //     delay: 1000
 //   });
+
+const homeSub = document.querySelector('button');
+        homeSub.addEventListener('click', () => {
+          setTimeout(() => {
+            homeSub.disabled = true
+          }, 1);
+        })
