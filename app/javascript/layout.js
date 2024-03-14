@@ -11,5 +11,7 @@
     })
 
     $(function () {
-        const locomotiveScroll = new LocomotiveScroll();
+        const locomotiveScroll = new LocomotiveScroll({
+            smooth: true
+        });
     })();

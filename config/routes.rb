@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'home' => 'home#index'
+  get 'article' => 'home#article'
   resources :murojaahs
   devise_for :users, :controllers => { registrations: 'users/registrations' }
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

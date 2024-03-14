@@ -11,7 +11,8 @@
     <div class="getstarted">
         <%- if controller_name != 'sessions' %>
             <%= button_to("Get Started", "/murojaahs", method: :get) %>
-        <% end %>
+        <% end %> <br>
+            <%= button_to("Read PDF Article", asset_path("ISI SHOLATI ILA MAMATI rev-2-1-1.pdf"), form: {target: "_blank"}, method: :get) %>
     </div>
 </div>
 <%= javascript_include_tag "home" %>

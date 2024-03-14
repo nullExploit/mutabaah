@@ -43,6 +43,24 @@ body::-webkit-scrollbar {
     margin-bottom: 2rem;
 }
 
+.para {
+    width: 50rem; 
+    color: #fff;
+}
+
+.para h1 {
+    font-size: 40px;
+}
+
+.forpara {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    padding: 3rem; 
+    gap: 3rem;
+}
+
 .title {
     display: flex;
     align-items: center;
