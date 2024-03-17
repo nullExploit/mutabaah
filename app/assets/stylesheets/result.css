@@ -63,6 +63,16 @@ body::-webkit-scrollbar {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.pagination a {
+    color: #fff;
+    text-decoration-color: transparent;
+    transition: .5s;
+}
+
+.pagination a:hover {
+    text-decoration-color: #fff;
+}
+
 .title {
     display: flex;
     align-items: center;

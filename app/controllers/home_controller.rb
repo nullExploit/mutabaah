@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   end
 
   def article
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page])
   end
 end
