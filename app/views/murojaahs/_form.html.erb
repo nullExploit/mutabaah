@@ -4,20 +4,19 @@
     <%= button_to("Back", murojaahs_path, method: :get) %>
     <section class="sect">
 <%= form_with(model: murojaah) do |form| %>
-  <% if murojaah.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(murojaah.errors.count, "error") %> prohibited this murojaah from being saved:</h2>
-
-      <ul>
-        <% murojaah.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
         <div class="box">
             <div class="titles mtop">
-                <h1>Muroja'ah</h1>
+                <h1>Muroja'ah <br><span><% if murojaah.errors.any? %>
+                <div style="color: #fff">
+                <h2><%= pluralize(murojaah.errors.count, "error") %> prohibited this murojaah from being saved:</h2>
+                <ul>
+                    <% murojaah.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                    <% end %>
+                </ul>
+                </div>
+            <% end %>
+            </span></h1>
             </div>
             <details class="mtop">
                 <summary>
@@ -300,10 +299,10 @@
                 </div>
               </div>
               <div class="rating mtoplite">
-                <%= form.text_field :total_rakaat, autocomplete: 'off', placeholder: 'Total Rakaat', maxlength: '2', required: 'true' %>
-                <%= form.text_field :total_page, autocomplete: 'off', placeholder: 'Total Halaman', maxlength: '3', required: 'true' %>
-                <%= form.text_field :no_surah, autocomplete: 'off', placeholder: 'QS.', maxlength: '3', required: 'true' %>
-                <%= form.text_field :grade, autocomplete: 'off', placeholder: 'Nilai Hafalan', maxlength: '2', required: 'true' %>
+                <%= form.text_field :total_rakaat, autocomplete: 'off', placeholder: 'Total Rakaat', maxlength: '2' %>
+                <%= form.text_field :total_page, autocomplete: 'off', placeholder: 'Total Halaman', maxlength: '3', class: 'total_page' %>
+                <%= form.text_field :no_surah, autocomplete: 'off', placeholder: 'QS.', maxlength: '3', class: 'qs' %>
+                <%= form.text_field :grade, autocomplete: 'off', placeholder: 'Nilai Hafalan', maxlength: '2' %>
               </div>
               <div class="sub mtoplite">
                 <%= form.submit 'Submit' %>

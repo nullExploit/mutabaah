@@ -24,3 +24,16 @@
         User.create!(record)
     end
     p "Created #{User.count} user samples"
+
+    Murojaah.destroy_all
+    murojaah_path = File.join(File.dirname(__FILE__), "/murojaah_sample.json")
+    murojaah_records = JSON.parse(File.read(murojaah_path))
+    murojaah_records.each do |record|
+        Murojaah.create!(record)
+    end
+    p "Created #{Murojaah.count} murojaah samples"
+
+    p "admin: administrator@gmail.com, pass: administrator123"
+    p "user: tester1@gmail.com, pass: tester123"
+    p "user: tester2@gmail.com, pass: tester123"
+    p "user: tester3@gmail.com, pass: tester123"

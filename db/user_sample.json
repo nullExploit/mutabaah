@@ -4,7 +4,7 @@
         "password": "administrator123",
         "password_confirmation": "administrator123",
         "name": "Administrator",
-        "age": "0",
+        "age": 0,
         "education": "Lain-lain",
         "job": "Lain-lain",
         "role": "ADMIN"
@@ -14,7 +14,7 @@
         "password": "tester123",
         "password_confirmation": "tester123",
         "name": "Tester1",
-        "age": "0",
+        "age": 0,
         "education": "Lain-lain",
         "job": "Lain-lain",
         "role": "USER"
@@ -24,7 +24,7 @@
         "password": "tester123",
         "password_confirmation": "tester123",
         "name": "Tester2",
-        "age": "0",
+        "age": 0,
         "education": "Lain-lain",
         "job": "Lain-lain",
         "role": "USER"
@@ -34,7 +34,7 @@
         "password": "tester123",
         "password_confirmation": "tester123",
         "name": "Tester3",
-        "age": "0",
+        "age": 0,
         "education": "Lain-lain",
         "job": "Lain-lain",
         "role": "USER"
