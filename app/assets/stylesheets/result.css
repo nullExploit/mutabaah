@@ -50,6 +50,7 @@ body::-webkit-scrollbar {
 
 .para h1 {
     font-size: 40px;
+    margin: 5rem 0 5rem 0;
 }
 
 .forpara {
@@ -59,6 +60,7 @@ body::-webkit-scrollbar {
     flex-wrap: wrap; 
     padding: 3rem; 
     gap: 3rem;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .title {

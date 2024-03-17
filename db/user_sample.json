@@ -1,0 +1,42 @@
+[
+    {
+        "email" : "administrator@gmail.com",
+        "password": "administrator123",
+        "password_confirmation": "administrator123",
+        "name": "Administrator",
+        "age": "0",
+        "education": "Lain-lain",
+        "job": "Lain-lain",
+        "role": "ADMIN"
+    },
+    {
+        "email" : "tester1@gmail.com",
+        "password": "tester123",
+        "password_confirmation": "tester123",
+        "name": "Tester1",
+        "age": "0",
+        "education": "Lain-lain",
+        "job": "Lain-lain",
+        "role": "USER"
+    },
+    {
+        "email" : "tester2@gmail.com",
+        "password": "tester123",
+        "password_confirmation": "tester123",
+        "name": "Tester2",
+        "age": "0",
+        "education": "Lain-lain",
+        "job": "Lain-lain",
+        "role": "USER"
+    },
+    {
+        "email" : "tester3@gmail.com",
+        "password": "tester123",
+        "password_confirmation": "tester123",
+        "name": "Tester3",
+        "age": "0",
+        "education": "Lain-lain",
+        "job": "Lain-lain",
+        "role": "USER"
+    }
+]

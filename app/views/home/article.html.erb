@@ -2,17 +2,74 @@
         <section class="body">
         <section class="sect">
             <div class="title mtop">
-                <h1>Result <br><span><%= notice %></span><br><%= button_to("Back", root_path, method: :get) %></h1>
+                <h1>Article <br><span><%= notice %></span><br><%= button_to("Back", root_path, method: :get) %></h1>
             </div>
             <div class="flexbreak"></div>
-            <div class="box mtop forpara" lang="ar" dir="ltr">
-                <div class="para">
-                    <h1>MUKADIMAH</h1><br>
-                    <h3>Definisi Sholati ila Mamati</h3><br>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus accusantium unde sit numquam. Temporibus impedit vero architecto ex ipsam corporis. Porro impedit optio, praesentium similique eius accusamus corporis facere fugit!</p>
-                    <div class="flexbreak"></div>
-                </div>
-                </div>
+            <div class="box mtop forpara">
+                <% @articles.each do |article| %>
+                    <div class="para">
+                        <h1><%= article.title %></h1>
+                        <h2><%= article.list1 %></h2><br>
+                        <p><%= article.para1 %></p><br>
+                        <p><%= article.para2 %></p><br>
+                        <p><%= article.para3 %></p><br>
+                        <p><%= article.para4 %></p><br>
+                        <h2><%= article.list2 %></h2><br>
+                        <p><%= article.para5 %></p><br>
+                        <p><%= article.para6 %></p><br>
+                        <p><%= article.para7 %></p><br>
+                        <p><%= article.para8 %></p><br>
+                        <h2><%= article.list3 %></h2><br>
+                        <p><%= article.para9 %></p><br>
+                        <p><%= article.para10 %></p><br>
+                        <p><%= article.para11 %></p><br>
+                        <p><%= article.para12 %></p><br>
+                        <h2><%= article.list4 %></h2><br>
+                        <p><%= article.para13 %></p><br>
+                        <p><%= article.para14 %></p><br>
+                        <p><%= article.para15 %></p><br>
+                        <p><%= article.para16 %></p><br>
+                        <h2><%= article.list5 %></h2><br>
+                        <p><%= article.para17 %></p><br>
+                        <p><%= article.para18 %></p><br>
+                        <p><%= article.para19 %></p><br>
+                        <p><%= article.para20 %></p><br>
+                        <h2><%= article.list6 %></h2><br>
+                        <p><%= article.para21 %></p><br>
+                        <p><%= article.para22 %></p><br>
+                        <p><%= article.para23 %></p><br>
+                        <p><%= article.para24 %></p><br>
+                        <h2><%= article.list7 %></h2><br>
+                        <p><%= article.para25 %></p><br>
+                        <p><%= article.para26 %></p><br>
+                        <p><%= article.para27 %></p><br>
+                        <p><%= article.para28 %></p><br>
+                        <h2><%= article.list8 %></h2><br>
+                        <p><%= article.para29 %></p><br>
+                        <p><%= article.para30 %></p><br>
+                        <p><%= article.para31 %></p><br>
+                        <p><%= article.para32 %></p><br>
+                        <div class="flexbreak"></div>
+                    </div>
+                <% end %>
             </div>
         </section>
     </section>
+    <script>
+        const para = document.querySelectorAll('.para p');
+        const subHeading = document.querySelectorAll('.para h2');
+
+        para.forEach(el => {
+            if (el.textContent == '') {
+                el.nextElementSibling.remove()
+                el.remove()
+            }
+        });
+
+        subHeading.forEach(el => {
+            if (el.textContent == '') {
+                el.nextElementSibling.remove()
+                el.remove()
+            }
+        });
+    </script>
